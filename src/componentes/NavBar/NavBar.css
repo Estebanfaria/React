@@ -1,0 +1,27 @@
+
+.header{
+  background-color: rgb(13, 184, 184);
+}
+
+.NavBar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+  
+  }  
+
+a{
+ text-decoration: none;
+ color: aliceblue;
+} 
+
+a:hover{
+  color: rgb(163, 163, 252);
+}
+
+p{
+  font-size: 3rem;
+  font-weight: lighter;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

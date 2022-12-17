@@ -1,0 +1,10 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    font-weight: lighter;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
