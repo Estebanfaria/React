@@ -5,20 +5,16 @@ function NavBar () {
   
     return (
         <header className="header">
-            <nav className="nav">
-            
+            <nav>
                 <ul className="NavBar">
                     <li>
-                        <a href="/"> Inicio </a>
+                        <a className="link" href="/"> Inicio </a>
                     </li>   
                     <li>
-                        <a href="/"> Catálogo </a>
+                        <a className="link"  href="/"> Catálogo </a>
                     </li>
                     <li>
-                        <p>WMusic</p> 
-                    </li>
-                    <li>
-                        <a href="/"> Contacto </a>
+                        <a className="link"  href="/"> Contacto </a>
                     </li>
                     <li>
                         <CartWidget/>

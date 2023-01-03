@@ -1,0 +1,22 @@
+.boton-contenedor{
+    display: flex;
+}
+
+.contador {
+    border: solid 1px;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agregarCarrito{    
+    background-color: cadetblue;
+    border: none;
+    border-radius: 1rem;
+    padding: 10px;
+}
+
+.agregarCarrito:hover {
+    background-color: rgb(92, 224, 174);
+}
