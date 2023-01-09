@@ -1,11 +1,10 @@
 import React from 'react'
-import ItemCounter from '../CounterItem/ItemCounter';
 import './card.css'
 
 
 function Card(props) {
 
-    const {img, title, price,modelo,stock} = props.item
+    const {img, title, price,modelo} = props.item
 
   return (
     <div className="card">
@@ -16,7 +15,6 @@ function Card(props) {
            <li><p> Precio: ${price}</p></li> 
            <li><p>Modelo: {modelo}</p> </li> 
           </ul> 
-            <ItemCounter stock={stock}/>
         </div>
         
 </div>
