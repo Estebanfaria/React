@@ -20,3 +20,7 @@ a:hover{
   color: rgb(163, 163, 252);
 }
 
+.logo{
+  background-color: transparent;
+  height: 3rem;
+}

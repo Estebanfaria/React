@@ -1,0 +1,11 @@
+.ver-mas{
+    background-color: orange;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: aliceblue;
+}
+
+.ver-mas:hover{
+    background-color: rgb(233, 171, 57);
+}
