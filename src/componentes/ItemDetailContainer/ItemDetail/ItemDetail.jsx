@@ -3,6 +3,9 @@ import ItemCounter from '../../CounterItem/ItemCounter';
 import'./ItemDetail.css'
 
 function ItemDetail({img, title, price, modelo, stock, detail}) {
+  function handleAddToCart(count){
+    console.log(`agregaste al carrtio ${count} unidades de el producto ${title}`);
+  }
   return (
     <div className='detail-contenedor'>
       <div className='detail-flex'>
@@ -15,7 +18,7 @@ function ItemDetail({img, title, price, modelo, stock, detail}) {
            <li><p> Precio: ${price}</p></li> 
            <li><p>Modelo: {modelo}</p> </li>
            <li><p> Detail: {detail}</p> </li> 
-           <li><ItemCounter stock={stock}/></li>
+           <li><ItemCounter onAddToCart={handleAddToCart} stock={stock}/></li>
           </ul> 
             
         </div>

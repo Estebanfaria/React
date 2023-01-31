@@ -18,21 +18,13 @@ function restar(){
     }
 }
 
-function agregarCarrito(){
-    if(click > 1){
-        console.log(`se agregaron ${click} productos al carrito`);
-    } else if(click === 1){
-        console.log(`se agregro ${click} producto al carrito `);
-    }
-    
-}
 
 return (
     <div className='boton-contenedor'>
         <button disabled={click === 1} onClick={restar}> - </button> 
         <div className='contador'> {click} </div>
         <button disabled={click === stock} onClick={sumar}> + </button>
-        <button onClick={agregarCarrito} className='agregarCarrito'>Agregar al carrito</button>
+        <button onClick={()=> props.onAddToCart(click)} className='agregarCarrito'>Agregar al carrito</button>
     </div>
   )
 }
