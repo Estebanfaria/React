@@ -1,13 +1,13 @@
 import {useState} from 'react'
 import './ItemCounter.css'
 
-function ItemCounter(props) {
+function ItemCounter({stock, onAddToCart }) {
 
 const[click, setClicks] = useState(1);
-const stock = props.stock;
+const deposito = stock;
 
 function sumar(){
-    if(click < stock ){
+    if(click < deposito ){
         setClicks(click + 1)
     }
 }
@@ -24,7 +24,7 @@ return (
         <button disabled={click === 1} onClick={restar}> - </button> 
         <div className='contador'> {click} </div>
         <button disabled={click === stock} onClick={sumar}> + </button>
-        <button onClick={()=> props.onAddToCart(click)} className='agregarCarrito'>Agregar al carrito</button>
+        <button onClick={()=> onAddToCart(click)} className='agregarCarrito'>Agregar al carrito</button>
     </div>
   )
 }

@@ -5,10 +5,16 @@ import './IDC.css'
 import { useParams } from 'react-router-dom';
 
 function  ItemDetailContainer() {
+
   const [producto, setProducto] = useState([]);
 
+  
+
   let params = useParams();
-  console.log(params);
+  
+  function handleAddToCart(count){
+   console.log('agregado al carrito');
+  }
 
   useEffect(
     ()=>{
@@ -21,6 +27,7 @@ function  ItemDetailContainer() {
   return (
       <div className='detail-container'>
       <ItemDetail 
+      onAddToCart={handleAddToCart}
       img={producto.img} 
       title={producto.title} 
       price={producto.price} 
