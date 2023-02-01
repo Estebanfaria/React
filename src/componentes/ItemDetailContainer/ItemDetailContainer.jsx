@@ -1,19 +1,21 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import { getProducto } from '../../services/mock';
 import ItemDetail from './ItemDetail/ItemDetail'
 import './IDC.css'
 import { useParams } from 'react-router-dom';
+import { cartContext } from '../../storage/cartContext';
 
 function  ItemDetailContainer() {
 
   const [producto, setProducto] = useState([]);
 
-  
-
   let params = useParams();
   
+  const context = useContext(cartContext);
+
   function handleAddToCart(count){
-   console.log('agregado al carrito');
+      const productoAndCount = {...producto, count:count}
+      context.agregarAlCarrito(productoAndCount)
   }
 
   useEffect(

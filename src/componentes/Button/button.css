@@ -1,5 +1,5 @@
 .ver-mas{
-    background-color: orange;
+    background-color: rgb(5, 169, 219);
     border: none;
     padding: 1rem;
     border-radius: 1rem;
@@ -7,5 +7,5 @@
 }
 
 .ver-mas:hover{
-    background-color: rgb(233, 171, 57);
+    background-color: rgb(166, 228, 236);
 }

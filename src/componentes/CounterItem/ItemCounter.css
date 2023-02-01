@@ -3,7 +3,8 @@
 }
 
 .contador {
-    border: solid 1px;
+    border-radius: 1rem;
+    background-color: rgb(151, 183, 184);
     width: 5rem;
     display: flex;
     justify-content: center;
@@ -15,8 +16,17 @@
     border: none;
     border-radius: 1rem;
     padding: 10px;
+    margin: 0 1rem;
 }
 
 .agregarCarrito:hover {
     background-color: rgb(92, 224, 174);
+}
+
+.suma-resta{
+    border: none;
+    background-color: rgb(86, 86, 233);
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+    padding: 0 1rem;
 }

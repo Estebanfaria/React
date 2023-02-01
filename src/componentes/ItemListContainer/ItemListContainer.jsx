@@ -5,8 +5,11 @@ import Item from "../Item/Item"
 import "./ItemList.css"
 
 function ItemListContainer(){
+
  const [productos, setProductos] = useState([]);
-let {categoryid} = useParams();
+
+    let {categoryid} = useParams();
+    
     useEffect(()=>{
         if(!categoryid){
             obtenerProductos()

@@ -1,14 +1,11 @@
 
-.header{
-  background-color: rgb(13, 184, 184);
-}
-
-
 .NavBar{
+    background-color: rgb(13, 184, 184);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+    padding:1rem 0 1rem 0rem ;
   }  
 
 .link{
@@ -22,5 +19,5 @@ a:hover{
 
 .logo{
   background-color: transparent;
-  height: 3rem;
+  height: 3.5rem;
 }

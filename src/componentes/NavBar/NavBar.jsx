@@ -5,7 +5,7 @@ import "./NavBar.css"
 function NavBar () {
   
     return (
-        <header className="header">
+        <header>
             <nav>
                 <ul className="NavBar">
                     <li> 

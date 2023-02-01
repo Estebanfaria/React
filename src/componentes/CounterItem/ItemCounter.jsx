@@ -21,9 +21,9 @@ function restar(){
 
 return (
     <div className='boton-contenedor'>
-        <button disabled={click === 1} onClick={restar}> - </button> 
+        <button className='suma-resta' disabled={click === 1} onClick={restar}> - </button> 
         <div className='contador'> {click} </div>
-        <button disabled={click === stock} onClick={sumar}> + </button>
+        <button className='suma-resta' disabled={click === stock} onClick={sumar}> + </button>
         <button onClick={()=> onAddToCart(click)} className='agregarCarrito'>Agregar al carrito</button>
     </div>
   )
