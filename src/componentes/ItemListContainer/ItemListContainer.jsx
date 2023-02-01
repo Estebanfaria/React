@@ -2,11 +2,13 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import obtenerProductos, { getProductoByCategory } from "../../services/mock"
 import Item from "../Item/Item"
+import Loader from "../Loader/Loader";
 import "./ItemList.css"
 
 function ItemListContainer(){
 
  const [productos, setProductos] = useState([]);
+ const [isLoading, setIsLoading] = useState(true);
 
     let {categoryid} = useParams();
     
@@ -15,13 +17,22 @@ function ItemListContainer(){
             obtenerProductos()
             .then( (respuesta)=>{
                  setProductos(respuesta)
-                })
+                }) 
+                .catch((error) => alert(error))   
+                .finally(
+                    () => setIsLoading(false)
+                ) 
             } else {
                 getProductoByCategory(categoryid)
-                .then((respuesta)=>{setProductos(respuesta)})
+                .then((respuesta)=>{setProductos(respuesta)}) 
+                .finally(()=> setIsLoading(false))
             }
     }, [categoryid])
 
+
+if(isLoading){
+    return <Loader/>
+} else {
     return (
         <>
         <div className="contenedor-cards"> 
@@ -33,5 +44,6 @@ function ItemListContainer(){
         </>
     )
 }
+} 
 
 export default ItemListContainer

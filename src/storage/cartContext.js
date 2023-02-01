@@ -7,10 +7,10 @@ function CartProvider(props){
 
     function agregarAlCarrito(item){
         let isInCart = cart.findIndex((productoInCart)=> productoInCart.id === item.id )
-        let newCart = cart.map((item)=>item);
+        let newCart = [...cart];
         if(isInCart !== -1){
-            // newCart[isInCart]
-            alert('Producto repetido')    
+            // newCart[isInCart] = 0;
+            console.log(newCart[isInCart]); 
         }else{
             newCart.push(item);
             setCart(newCart);
@@ -18,8 +18,20 @@ function CartProvider(props){
         
     }
 
+    function eliminarDelCarrito(itemId){
+        let newCart = [...cart];
+    }
+
+    function calcularCantidadTotal(itemId){
+
+    }
+
+    function calcularPrecioTotal(itemId){
+
+    }
+
     return(
-        <cartContext.Provider value={{cart, agregarAlCarrito}}>
+        <cartContext.Provider value={{cart, agregarAlCarrito, eliminarDelCarrito, calcularCantidadTotal, calcularPrecioTotal}}>
             {props.children}
         </cartContext.Provider>
     )

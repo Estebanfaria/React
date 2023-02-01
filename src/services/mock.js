@@ -5,7 +5,7 @@ const productos = [
         title:'Remera',
         modelo:'1978',
         img:'/multimedia/1978.jpg',
-        price:'200',
+        price:'15000',
         stock:'5'   ,
         detail:'Remera oficial de la selección argentina utilizada en el mundial de 1978.'
     },
@@ -15,7 +15,7 @@ const productos = [
         title:'Remera',
         modelo:'1986',
         img:'/multimedia/1986.webp'
-        ,price:'300'
+        ,price:'30000'
         ,stock:'8'  ,
         detail:'Remera oficial de la selección argentina utilizada en el mundial de 1986.'
     },
@@ -25,7 +25,7 @@ const productos = [
         title:'Remera',
         modelo:'2022',
         img:'/multimedia/2022.webp',
-        price:'1500',
+        price:'15000',
         stock:'10',
         detail:'Remera oficial de la selección argentina utilizada en el mundial de 2022.'
     },
