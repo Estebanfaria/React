@@ -1,5 +1,5 @@
 import {useState, useEffect, useContext} from 'react'
-import { getProducto } from '../../services/mock';
+import { getProducto } from '../../services/firebase';
 import ItemDetail from './ItemDetail/ItemDetail'
 import './IDC.css'
 import { useParams } from 'react-router-dom';

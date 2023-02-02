@@ -5,8 +5,8 @@ const productos = [
         title:'Remera',
         modelo:'1978',
         img:'/multimedia/1978.jpg',
-        price:'15000',
-        stock:'5'   ,
+        price:15000,
+        stock:5 ,
         detail:'Remera oficial de la selección argentina utilizada en el mundial de 1978.'
     },
     {
@@ -14,9 +14,9 @@ const productos = [
         category:'Remeras',
         title:'Remera',
         modelo:'1986',
-        img:'/multimedia/1986.webp'
-        ,price:'30000'
-        ,stock:'8'  ,
+        img:'/multimedia/1986.webp',
+        price:30000,
+        stock:8  ,
         detail:'Remera oficial de la selección argentina utilizada en el mundial de 1986.'
     },
     {
@@ -25,8 +25,8 @@ const productos = [
         title:'Remera',
         modelo:'2022',
         img:'/multimedia/2022.webp',
-        price:'15000',
-        stock:'10',
+        price:15000,
+        stock:10,
         detail:'Remera oficial de la selección argentina utilizada en el mundial de 2022.'
     },
     {
@@ -35,8 +35,8 @@ const productos = [
         title:'Short',
         modelo:'1994',
         img:'/multimedia/short1994.webp',
-        price:'7000',
-        stock:'6',
+        price:7000,
+        stock:6,
         detail:'Short oficial de la seleccion argentina 1994.'
     },
     {
@@ -45,8 +45,8 @@ const productos = [
         title:'Short',
         modelo:'1994',
         img:'/multimedia/shortarquero2022.webp',
-        price:'7000',
-        stock:'15',
+        price:7000,
+        stock:15,
         detail:'Short Arquero oficial de la seleccion argentina 2022.'
     },  
     {

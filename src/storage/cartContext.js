@@ -10,7 +10,7 @@ function CartProvider(props){
         let newCart = [...cart];
         if(isInCart !== -1){
             // newCart[isInCart] = 0;
-            console.log(newCart[isInCart]); 
+            // console.log(newCart[isInCart]); 
         }else{
             newCart.push(item);
             setCart(newCart);

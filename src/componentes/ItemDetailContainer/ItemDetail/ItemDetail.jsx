@@ -15,7 +15,7 @@ function ItemDetail({img, title, price, modelo, stock, detail, onAddToCart, isIn
       <h4 className="priceTag">$ {price}</h4>
       <p>{modelo}</p>
       {isInCart?(
-        <Link to="/carrito"><button>ir al carrito</button></Link>
+        <Link to="/carrito"><button className='volver-al-carrito'>Ir al carrito</button></Link>
       ):(<li><ItemCounter className='detail-boton' onAddToCart={onAddToCart} stock={stock}/></li>)}
       
     </div>

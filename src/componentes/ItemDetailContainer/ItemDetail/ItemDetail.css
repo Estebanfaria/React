@@ -39,3 +39,10 @@
     color: #8c8c8e
   }
 
+  .volver-al-carrito{
+    border: none;
+    background-color: #8c8c8e;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+  }
+

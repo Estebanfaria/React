@@ -5,8 +5,10 @@ import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailCon
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './storage/cartContext';
 import Carrito from './componentes/Cart/Carrito';
+import app, { obtenerProductos } from './services/firebase'
 
 function App() {
+  console.log(obtenerProductos());
   return (
     <div className='contenedor'>
       <BrowserRouter>
