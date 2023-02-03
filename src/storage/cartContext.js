@@ -19,19 +19,23 @@ function CartProvider(props){
     }
 
     function eliminarDelCarrito(itemId){
-        let newCart = [...cart];
+        // let newCart = [...cart];
+    }
+
+    function vaciarCarrito(){
+        setCart([])
     }
 
     function calcularCantidadTotal(itemId){
 
     }
 
-    function calcularPrecioTotal(itemId){
-
+    function calcularPrecioTotal(){
+        return 1000;
     }
 
     return(
-        <cartContext.Provider value={{cart, agregarAlCarrito, eliminarDelCarrito, calcularCantidadTotal, calcularPrecioTotal}}>
+        <cartContext.Provider value={{cart, agregarAlCarrito, eliminarDelCarrito, calcularCantidadTotal, calcularPrecioTotal, vaciarCarrito}}>
             {props.children}
         </cartContext.Provider>
     )
