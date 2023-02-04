@@ -3,15 +3,9 @@ import { useContext } from 'react';
 import { cartContext } from '../../../storage/cartContext';
 
 function ProductStyle(props) {
-    const {removeItem, calcularPrecioTotal, cart} = useContext(cartContext)
-    const {img, title, count, id} = props.item
-    const price = calcularPrecioTotal()
-
-    function precioTotal(){
-      const total = cart.reduce((acc, prod)=> acc + prod.price, 0)
-      return total
-}
-
+    const {removeItem} = useContext(cartContext)
+    const {img, title, count, id, price} = props.item
+  
   return (
     <>
         <div className='cart-item'>

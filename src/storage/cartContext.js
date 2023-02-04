@@ -9,8 +9,7 @@ function CartProvider(props){
         let isInCart = cart.findIndex((productoInCart)=> productoInCart.id === item.id )
         let newCart = [...cart];
         if(isInCart !== -1){    
-            // newCart[isInCart] = 0;
-            // console.log(newCart[isInCart]); 
+            
         }else{
             newCart.push(item);
             setCart(newCart);

@@ -23,6 +23,7 @@ import { Link } from 'react-router-dom';
       total: calcularPrecioTotal(),
       fecha: new Date(), 
     }
+
   
     async function enviarOrder(){
       let id = await createOrder(order);
@@ -35,7 +36,7 @@ import { Link } from 'react-router-dom';
   return(
     <>
     <div style={{margin:'0 auto', fontSize:'larger'}}>
-     Gracias por tu compra 
+     Gracias por tu compra.
      </div>
      <Link style={{margin:'1rem auto'}} to='/'><button onClick={vaciarCarrito} style={{border:'solid 1px', backgroundColor:'cyan'}}>Volver al Inicio</button></Link>
      </>
@@ -89,7 +90,7 @@ import { Link } from 'react-router-dom';
           userData={userData}
         />
   
-        <button style={{border:'none', margin:'1rem', fontFamily: 'Georgia, Times New Roman, Times, serif'}} onClick={()=>handleCheckout(userData)} disabled={formIsInvalid()} type="submit">
+        <button style={{border:'none', margin:'1rem', fontFamily: 'Georgia, Times New Roman, Times, serif'}} onClick={()=>handleCheckout(userData)}  disabled={formIsInvalid()} type="submit">
           Crear orden
         </button>
         <button style={{border:'none', fontFamily: 'Georgia, Times New Roman, Times, serif'}} onClick={() => setUserData({ name: "", email: "", phone: "" })}>
