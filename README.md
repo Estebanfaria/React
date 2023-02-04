@@ -7,6 +7,6 @@
   <br>
 </h1>
 
-<h4 align="center">Encontrá la pagina que estas buscandos, si esa, donde podes encontrar TODOS los conjuntos e indumentarias de la selección argentina. <a href="http://electron.atom.io" target="_blank">Electron</a>.</h4>
+<h4 align="center">Encontrá la pagina que estas buscandos, si esa, donde podes encontrar TODOS los conjuntos e indumentarias de la selección argentina.</h4>
 
 
