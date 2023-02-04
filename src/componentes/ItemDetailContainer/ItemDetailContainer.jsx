@@ -14,13 +14,22 @@ function  ItemDetailContainer() {
 
   let params = useParams();
   
-  const {agregarAlCarrito} = useContext(cartContext);
+  const {agregarAlCarrito, cart} = useContext(cartContext);
 
   function handleAddToCart(count){
     setIsInCart(true);
-      const productoAndCount = {...producto, count:count}
+      const productoAndCount = {...producto, count: count}
       agregarAlCarrito(productoAndCount)
   }
+
+  function checkStock(){
+    let itemInCart = cart.find((item)=>item.id === producto.id);
+    let stockUpdate = producto.stock;
+    if(itemInCart){
+      stockUpdate = producto.stock - itemInCart.count;
+    }
+    return stockUpdate
+      }
 
   useEffect(
     ()=>{
@@ -29,7 +38,7 @@ function  ItemDetailContainer() {
        .catch( (error)=> alert(error))
        .finally(()=> setIsLoading(false))
       },
-   [])
+   []);
 
 if(isLoading){
   return <Loader/>
@@ -42,9 +51,9 @@ if(isLoading){
     img={producto.img} 
     title={producto.title} 
     price={producto.price} 
-    modelo={producto.modelo} 
-    stock={producto.stock} 
+    modelo={producto.modelo}  
     detail={producto.detail}
+    stockUpdate={checkStock()}
     />
     </div>
 )

@@ -4,12 +4,14 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CartProvider } from './storage/cartContext';
-import Carrito from './componentes/Cart/Carrito';
 import { exportArray } from './services/firebase';
+import CartContainer from './componentes/Cart/CartContainer';
+import FormCheckout from './componentes/FormCheckout/FormCheckout';
 
 function App() {
  
   return (
+    
     <div className='contenedor'>
       <BrowserRouter>
         <CartProvider>
@@ -18,7 +20,8 @@ function App() {
                 <Route path='/' element={<ItemListContainer/>} />
                 <Route path='/detail/:id' element={<ItemDetailContainer/>} />
                 <Route path='/category/:categoryid' element={<ItemListContainer/>} />
-                <Route path='/carrito' element={<Carrito/>} />
+                <Route path='/carrito' element={<CartContainer/>} />
+                <Route path='/FormCheckout' element={<FormCheckout/>} />
                 <Route path='*' element={<h2>Ruta no encontrada</h2>}/>
                 
               </Routes>

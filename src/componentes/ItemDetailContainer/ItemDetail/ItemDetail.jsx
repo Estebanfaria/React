@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import ItemCounter from '../../CounterItem/ItemCounter';
 import'./ItemDetail.css'
 
-function ItemDetail({img, title, price, modelo, stock, detail, onAddToCart, isInCart}) {
- 
+function ItemDetail({img, title, price, modelo, detail, onAddToCart, isInCart, stockUpdate}) {
   return (
     <div className="card-detail_main">
     <div className="card-detail_img">
@@ -16,7 +15,7 @@ function ItemDetail({img, title, price, modelo, stock, detail, onAddToCart, isIn
       <p>{modelo}</p>
       {isInCart?(
         <Link to="/carrito"><button className='volver-al-carrito'>Ir al carrito</button></Link>
-      ):(<li><ItemCounter className='detail-boton' onAddToCart={onAddToCart} stock={stock}/></li>)}
+      ):(<li><ItemCounter className='detail-boton' onAddToCart={onAddToCart} stock={stockUpdate}/></li>)}
       
     </div>
     </div>

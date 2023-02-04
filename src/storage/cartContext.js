@@ -8,7 +8,7 @@ function CartProvider(props){
     function agregarAlCarrito(item){
         let isInCart = cart.findIndex((productoInCart)=> productoInCart.id === item.id )
         let newCart = [...cart];
-        if(isInCart !== -1){
+        if(isInCart !== -1){    
             // newCart[isInCart] = 0;
             // console.log(newCart[isInCart]); 
         }else{
@@ -18,24 +18,26 @@ function CartProvider(props){
         
     }
 
-    function eliminarDelCarrito(itemId){
-        // let newCart = [...cart];
+    function removeItem(id){
+        let newCart = [...cart]
+        newCart = newCart.filter((producto)=>producto.id !== id)
+        setCart(newCart)
     }
 
     function vaciarCarrito(){
-        setCart([])
+        let newCart = [...cart]
+        newCart.length = 0 
+        setCart(newCart)
     }
 
-    function calcularCantidadTotal(itemId){
-
-    }
-
-    function calcularPrecioTotal(){
-        return 1000;
+    function calcularPrecioTotal(){        
+            let totalPrecio = 0
+            cart.forEach(producto => {totalPrecio += (producto.count * producto.price)}) 
+            return totalPrecio
     }
 
     return(
-        <cartContext.Provider value={{cart, agregarAlCarrito, eliminarDelCarrito, calcularCantidadTotal, calcularPrecioTotal, vaciarCarrito}}>
+        <cartContext.Provider value={{cart, agregarAlCarrito, removeItem, calcularPrecioTotal, vaciarCarrito}}>
             {props.children}
         </cartContext.Provider>
     )

@@ -7,15 +7,26 @@ function CartWidget() {
 const contexto = useContext(cartContext);
 let cantidad = contexto.cart.length
 
-    return (
-
+    if(cantidad){
+        return (
             <button className='button-carrito'> 
-            <div className='carrito-container'>
-            <img className='img-carrito' src="/multimedia/carrito.png" alt="" />
-            <span className='carrito-number'>{contexto.cart.length}</span>
-            </div> 
+                <div className='carrito-container'>
+                    <img className='img-carrito' src="/multimedia/carrito.png" alt="" />
+                    <span className='carrito-number'>{cantidad}</span>
+                </div> 
             </button>
         )
+    }else{
+        return (
+            <button className='button-carrito'> 
+                <div className='carrito-container'>
+                    <img className='img-carrito' src="/multimedia/carrito.png" alt="" />
+                </div> 
+            </button> 
+        )
+        
+    }
+    
 }
 
 export default CartWidget
